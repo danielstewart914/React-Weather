@@ -1,16 +1,15 @@
-import express from "express";
-import ViteExpress from "vite-express";
+import express from 'express';
+import ViteExpress from 'vite-express';
+import weatherRouter from './routes';
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 const app = express();
 
-app.get("/hello", (_, res) => {
-  res.send("Hello World!!");
-});
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-ViteExpress.listen(app, 3000, () =>
-  console.log("Server is listening on port 3000...")
-);
+app.use(weatherRouter);
+
+ViteExpress.listen(app, PORT, () => {
+	console.log(`Server is listening on port ${PORT}`)
+});
