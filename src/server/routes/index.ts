@@ -1,5 +1,8 @@
 import { Router } from 'express';
-import { getWeatherByLatLon, getWeatherByLocationName } from '../controllers/weatherController';
+import {
+	getWeatherByLatLon,
+	getWeatherByLocationName,
+} from '../controllers/weatherController';
 
 const weatherRouter = Router();
 
