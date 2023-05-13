@@ -1,9 +1,10 @@
 import "./App.css";
+import Compass from "./components/Compass";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Compass rotationInDeg={127} size={1}/>
     </>
   );
 }
