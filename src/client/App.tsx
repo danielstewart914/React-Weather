@@ -4,7 +4,7 @@ import Compass from "./components/Compass";
 function App() {
   return (
     <>
-      <Compass rotationInDeg={127} size={1}/>
+      <Compass rotation={45} size={20}/>
     </>
   );
 }
