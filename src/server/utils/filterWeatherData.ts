@@ -1,4 +1,4 @@
-import { WeatherData } from '../../services/fetchWeather';
+import { WeatherData } from '../services/fetchWeather';
 
 const filterWeatherData = ({
 	dt,

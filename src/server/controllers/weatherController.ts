@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import fetchLocationByLatLon from '../../services/fetchLocationByLatLon';
+import fetchLocationByLatLon from '../services/fetchLocationByLatLon';
 import fetchLocationByName, {
 	Location,
-} from '../../services/fetchLocationByName';
-import fetchWeather, { WeatherForecast } from '../../services/fetchWeather';
+} from '../services/fetchLocationByName';
+import fetchWeather, { WeatherForecast } from '../services/fetchWeather';
 import filterWeatherData from '../utils/filterWeatherData';
 import countryCodes from '../data/countryCodes';
 interface SearchParams {
